@@ -1,0 +1,69 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="mythologie.css">
+</head>
+
+<form action="sendToMySecondYearInIut.phpp" method="get">
+<div>
+    <label for="surname">Nom :</label>
+        <input id="surname" name="uname" type="text">
+</div>
+<br>
+<div>
+    <label for="name">Prénom :</label>
+        <input id="name" name="prenom" type="text">
+</div>  
+<br>
+<div>
+    <label for="femme">Sexe :</label>
+<div><input id="femme" name="sexe" value="Femme" type="radio">
+<label for="femme">Femme</label>
+<br>
+    <input id="homme" name="sexe" valeur="Homme" type="radio">
+    <label for="homme">Homme</label>
+</div>
+</div>
+<br>
+<div>
+    <label for="Date">Date de naissance :</label>
+<input type="date" id="Date" name="naissance">
+</div>
+<br>
+<div>
+    <label for="pwd">Mot de passe :</label>
+<input type="password" id="pwd" name="pwd">
+</div>
+<br>
+<div>
+<label for="email">Email :</label>
+<input type="email" id="email" name="email">
+
+</div>
+<br>
+<div>
+    <label for="niveau">Niveau en karaté :</label>
+<input type="number" min="0" max="5"   id="niveau" name="niveau">
+</div>
+<br>
+<div>
+    <label for="prix">Niveau d'engagement :</label>
+    <div>
+        <input id="Basique" name="Basique" valeur="Basique" type="radio">
+        <label for="Basique">Basique (5 €)</label> 
+        <br>
+        <input id="Gold" name="Gold" valeur="Gold"  type="radio">
+        <label for="Gold">Gold (15 €)</label>
+        <br>
+        <input id="Tatane" name="Tatane" valeur="Tatane"  type="radio">
+        <label for="Tatane">Tatane in your face (50 €)</label>
+    </div>
+</div>
+<br>
+<div> 
+    <input type="submit" value="Envoyer">
+</div>
+    <div>
+</div>    
+
+  </form>

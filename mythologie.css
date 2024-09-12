@@ -1,0 +1,850 @@
+/*police*/
+@font-face {
+    font-family: Greek;
+    src: url(police/Norse.otf);
+    }
+
+@font-face {
+    font-family: GreekC;
+    src: url(police/ROMANUS.otf);
+    }
+
+@font-face {
+    font-family: GreekB;
+    src: url(police/Norsebold.otf);
+    }
+
+@font-face {
+    font-family: GreekD;
+    src: url(police/HFF\ Greek\ ExCon.ttf);
+    }
+
+    /*html*/
+
+    html{
+        scroll-behavior: smooth;
+        /*scroll-padding-top: 70px;*/
+    }
+
+    /*body*/
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        background-color: rgba(161, 134, 101, 0.914);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+    }
+
+    /*header*/
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0px;
+        width: 100%;
+        padding: 20px 49px;
+        background: transparent;
+        display: flex;
+        justify-content: space-between;
+        z-index: 1000;
+    }
+
+    .header div{
+        position: relative;
+    }
+    /*logo : MYTHOLOGIE*/
+
+    .logo {
+        font-family: GreekB, 'Times New Roman', serif;
+        font-size: 43px;
+        color: rgba(233, 206, 161, 0.8);
+        font-weight: 600;
+        text-decoration: none;
+        margin-left: 10px;
+        text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.6);
+    }
+
+    .logo:hover{
+        transition: 0.1s ease-in-out;
+        color: #e7dbb8ee;
+        text-shadow:
+        -1.5px -1.5px 0 rgb(104, 88, 60),
+        1.5px -1.5px 0 rgb(104, 88, 60),
+        -1.5px 1.5px 0 rgb(104, 88, 60),
+        1.5px 1.5px 0 rgb(104, 88, 60);
+    }
+
+    /*barre de nav : menus (home,contact..)*/
+
+    nav {
+        display: flex;
+        width: auto;
+        z-index: 1000;
+    }
+
+    .navbar a {
+        font-family: GreekB, 'Times New Roman', serif;
+        font-size: 32px;
+        color:#fff;
+        font-weight: 600;
+        text-decoration: none;
+        margin-left: 0px;
+        padding: 0 33px;
+
+
+    }
+
+    .navbar>div{
+        text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    .navbar > div:hover::after {
+        display: block;
+        height: 2px;
+    }
+
+
+    nav>div:hover>a{
+        transition: 0.15s ease-in-out;
+        color: #fff4d4ee;
+        text-shadow:
+        -1.5px -1.5px 0 rgb(104, 88, 60, 0.7),
+        1.5px -1.5px 0 rgb(104, 88, 60, 0.7),
+        -1.5px 1.5px 0 rgb(104, 88, 60, 0.7),
+        1.5px 1.5px 0 rgb(104, 88, 60, 0.7);
+
+    }
+
+    /*button login*/
+
+    .login-button {
+        font-family: GreekB, Times, serif;
+        position: relative;
+        top :-9px;
+        font-size: 32px;
+        color: #fff;
+        background-color: rgb(219, 193, 149, 0.8);;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        margin-top: 2px;
+        border: 0px solid rgb(219, 193, 149);;
+        border-radius: 22px;
+        cursor: pointer;
+        transition: 0.25s ease-in;
+    }
+
+    .login-button a {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .login-button:hover {
+        background-color: #ffffffde;
+        color: rgb(156, 127, 77);;
+        text-shadow: none;
+
+    }
+
+    .texte-login:hover {
+        color: rgb(156, 127, 77);;
+    }
+
+
+    /*sous-menus*/
+
+    .submenu {
+        display: none;
+        background-color: rgba(72, 55, 27, 0.7);
+        border-radius: 0 0 10px 10px;
+        text-shadow: none;
+        top:100%;
+        box-sizing: border-box;
+        border-top: 2px solid #fff4d4cd;
+        transition: display 0.3s ease-in-out;
+    }
+
+    .submenu a {
+        font-family: serif;
+        font-size: 100%;
+        white-space: nowrap;
+    }
+
+
+    .submenu div {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: 1.75px solid rgba(233, 207, 164, 0);
+    }
+
+    .submenu div:hover {
+        border: 1.75px solid rgba(233, 207, 164, 0.6);
+        background-color: rgb(219, 193, 149, 0.7);;
+        cursor: pointer;
+    }
+
+    .submenu div.derniere:hover {
+        border-radius: 0 0 10px 10px;
+    }
+
+
+    .submenu > div:hover a{
+        color: rgb(85, 74, 26);
+    }
+
+    nav > div:hover .submenu{
+    display: block;
+    position: absolute;
+    font-family: Greek, Times, serif;
+    font-size: 24px;
+    }
+    
+
+    /*image d'accueil et texte*/
+
+    .background-image {
+        background:url('mytho.jpg') no-repeat center center/cover;
+        height: 990px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin-top: 0;
+    }
+
+    .texte h2{
+        color: #fff7e9;
+        font-size: 124px;
+        font-family: GreekB, Times, serif;
+        position: relative;
+        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+        bottom: 50px;
+    }
+
+    /*bouton découvrir*/
+
+    .decouvrir {
+        color: #fff;
+        font-family: GreekB, Times, serif;
+        font-size: 30px;
+        border-radius: 23px;
+        position: absolute;
+        left:47%;
+        text-decoration: none;
+        background-color: rgb(219, 193, 149, 0.5);
+        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+        padding: 7px 20px;
+        cursor: pointer;
+        border: 3px solid  rgba(233, 207, 164, 0.6);
+        left: 50%; /* Centrer horizontalement */
+        transform: translateX(-50%); 
+
+    }
+
+    .texte {
+        text-align: center;
+    }
+
+    .decouvrir:hover{
+        background-color: rgba(251, 229, 192, 0.5);
+        color: #fff;
+        text-shadow: none;
+        border: 3px solid rgb(255, 249, 239, 0.5);;
+        transition: 0.1s ease;
+    }
+
+    /* texte :'Découvrez leurs Histoires :'*/
+
+    .espace p {
+        margin: 20px;
+    }
+
+    .histoires {
+        margin-top: 100px;
+        text-align: center;
+        /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /*ombres*/
+
+    }
+
+    .histoires h2 {
+        color: #4f3913fb;
+        text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.291);
+        font-family: Greek;
+        font-size: 80px;
+        padding: 0 20px;
+        background-color: rgba(206, 191, 172, 0.31);
+        border-radius: 20px; 
+        display: inline-block;
+    }
+
+    /*images des dieux et textes*/
+
+    .dieux {
+        display: flex;
+        justify-content: center; /* Centrer horizontalement */
+        align-items: center; /* Centrer verticalement */
+        margin-top: 50px;
+        background-color: rgba(110, 88, 59, 0.552);
+        padding: 100px;;
+    }
+    
+    .dieux img {
+        border-radius: 7%;
+        margin: 50px;
+        transition: transform 0.3s; 
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /*ombres*/
+    }
+
+    .dieux img:hover { /*survole des images*/
+        transform: scale(1.05); /*zoom*/
+    }
+
+    .dieux a{
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .dieux>a p {
+        font-family: GreekB;
+        text-align: center;
+        font-size: 40px;
+        color: #382c0ef0;
+        text-shadow:
+        -1.5px -1.5px 0 rgb(104, 88, 60),
+        1.5px -1.5px 0 rgb(104, 88, 60),
+        -1.5px 1.5px 0 rgb(104, 88, 60),
+        1.5px 1.5px 0 rgb(104, 88, 60);
+        transition: transform 0.2s; 
+        
+    }
+
+    .dieux>a p.p1:hover {
+        transform: scale(1.1); /*zoom*/
+        text-decoration: 0.5 px underline;
+    }
+
+    .dieux>a p.p2:hover{
+        color: #fcececf0;
+    }
+
+    .dieux>a p.p2 {
+        font-family: Greek;
+        color: #fdf1d1f0;
+        font-size: 30px;
+        text-shadow:
+        -1.5px -1.5px 0 rgb(104, 88, 60),
+        1.5px -1.5px 0 rgb(104, 88, 60),
+        -1.5px 1.5px 0 rgb(104, 88, 60),
+        1.5px 1.5px 0 rgb(104, 88, 60);
+    }
+
+    /*article*/
+
+
+    article {
+        padding-top: 10%;
+        padding-bottom: 12%;
+        background-image: url(sky\ variation\ \,\ Denis\ Nigmatullin.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        scroll-padding-top: 20px;
+    }
+
+    .article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .article>a img {
+        width: 480px;
+        margin-right: 200px;
+        margin-left: 0%;
+        transition: transform 0.2s; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /*ombres*/
+        border-radius: 5%;
+    }
+
+    .article>a img:hover { /*survole des images*/
+        transform: scale(1.02); /*zoom*/
+        cursor: pointer;
+    }
+
+
+    .article p {
+        color : #3c2b0d;
+        background-color:  rgba(219, 193, 149, 0.508);
+        text-align: center;
+        border: 3px solid  rgba(207, 180, 136, 0.625);
+        border-radius: 7%;
+        padding: 3%;
+        font-size: 215%;
+        margin-left: 10% ;
+        margin-right: 10%;
+    }
+
+
+
+
+
+
+
+
+    /* Footer */
+
+    .footer {
+        background: rgb(138, 113, 81);
+        color: #fff;
+        padding: 100px;
+        padding-bottom: 2%;
+        text-align: center;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .footer-section {
+        flex: 1;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.297);  
+         margin: 0 20px;     
+        text-align: center;
+    }
+
+    .footer-section h3 {
+        font-family: GreekB;
+        color: #453613;
+        font-size: 39px;
+        margin: auto;
+        margin-bottom: 13px;    
+    }
+
+    .footer-section p {
+        font-family: sans-serif;
+        font-style: bold;
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    .footer-section a {
+        color: #fff;
+        text-decoration: none;
+        margin-right: 10px;
+    }
+
+    .footer-section a:hover {
+        text-decoration: underline;
+    }
+
+    .reseaux {
+        display: flex;
+        flex-direction: row;
+        margin-left: 29%;
+        width: 45%;
+    }
+
+    .reseaux a img {
+        width: 100%;
+        filter: invert();
+        opacity: 80%;
+        margin: 5px;
+        padding-right: 10px;
+        transition: transform 0.2s;
+    }
+
+    .reseaux a img:hover{
+        opacity: 100%;
+        transform: scale(1.03); /*zoom*/
+    }
+
+    .espacefooter {
+        margin: 5%;
+        margin-bottom: 10px;
+    }
+
+
+    footer .copyright p {
+        font-size: 110%;
+        background-color: rgb(99, 77, 48);
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+
+
+
+    /* RESPONSIVE */
+
+
+
+@media(max-width:1200px) {
+    
+    /* footer */ 
+
+    .reseaux {
+        margin-left: 22%;
+        width: 60%;
+    }
+    
+}
+
+@media(max-width:992px) {
+
+   
+    
+    
+    /* menu burger */
+    
+    .navbar {
+        display: none;
+      }
+
+    .burger-trait {
+        /* partie superieur du du burger-all*/
+        display: inline-block;
+        background-color: rgba(251, 229, 192, 0.5);
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        margin: -33% 0 0 0;
+        overflow: hidden;
+        position: absolute;
+        top: 20px;
+        right: 0;
+    }
+
+    .burger-trait:hover {
+        /* quand on passe le surseur sur burger trait */
+        cursor: pointer;
+        opacity: 0.8;
+    }
+
+    .burger-trait > * {
+        /* comporteent des traits blancs*/
+        display: block;
+        width: 34px;
+        height: 3px;
+        background: white;
+        margin-left: 10px;
+        position: absolute;
+        backface-visibility: hidden;
+
+    }
+
+    .burger-top {
+        margin-top: 17px;
+    }
+    .burger-middle {
+        margin-top: 26px;
+    }
+    .burger-bottom {
+        margin-top: 35px;
+    }
+
+    .burger-trait:hover .burger-top {
+        width: 22px;
+    }
+    .burger-trait:hover .burger-middle {
+        width: 28px
+    }
+
+    .burger {
+        /* le menu est invisible */
+        position:relative;
+        display: none;
+        width: 200px;
+        height: 350px;
+        overflow: hidden;
+        position: relative;
+        top: 0px;
+        right: -30px;
+    }
+
+    .burger-sous-menu a {
+        font-family: GreekC, 'Times New Roman', serif;
+        font-size: 20px;
+        margin-left: 0px;
+        padding: 0 33px;
+        background: linear-gradient(to top, rgba(219, 193, 149, 0.1), rgba(156, 127, 77, 0.1));
+        border-radius: 100px;
+    }
+
+    .burger>div>a {
+        font-family: Greek, 'Times New Roman', serif;
+        margin-left: 0px;
+        padding: 0 33px;
+        background: linear-gradient(to top, rgba(219, 193, 149, 0.1), rgba(156, 127, 77, 0.1));
+        border-radius: 100px;
+    }
+
+    .burger>div>a:hover {
+        background: linear-gradient(to bottom, rgba(219, 193, 149, 0.1), rgba(156, 127, 77, 0.1));
+    }
+
+    .burger-sous-menu a:hover {
+        background: linear-gradient(to bottom, rgba(219, 193, 149, 0.1), rgba(156, 127, 77, 0.1));
+    }
+
+    .burger>div>a {
+        font-family: GreekC, 'Times New Roman', serif;
+        font-size: 32px;
+        color:#7a6532;
+        margin-left: 0px;
+        padding: 0 33px;
+        text-decoration: none;
+    }
+
+    .burger>div:hover .burger-sous-menu a{
+        display: inline;
+    }
+
+    .burger-sous-menu a {
+        text-decoration: none;
+        color: #fff;
+        display: none;
+    }
+
+    /* comportement de l'icone du menu deroulant quand on passe la souris */
+
+    .burger-all:hover .burger{
+
+        position: relative;
+        display: block;
+        top: 50px;
+        width: 200px;
+        height: 300px;
+        background-color: rgba(210, 183, 137, 0.95);
+
+        text-align: center;
+        padding: 10px;
+        font-size: 1em;
+        font-family: GreekC;
+        color: #fff;
+        border-bottom-left-radius: 22px;
+        border-bottom-right-radius: 22px;
+    }
+
+    .burger-all:hover .burger-trait {
+        /* comportement de l'icone du menu deroulant quand on passe la souris */
+        width: 200px;
+        height: 50px;
+        border-radius: 22px 22px 0 0;
+        position: absolute;
+        top: 65px;
+        right: -30px;
+    }
+
+    .burger .login-button{
+        position: relative;
+        margin: 10% 0 0 0;
+        font-family: GreekC, Times, serif;
+        font-size: 32px;
+        color: #fff;
+        background: linear-gradient(to top left, rgba(219, 193, 149, 0.8), rgba(156, 127, 77, 0.8));
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        border: 0px solid rgb(219, 193, 149);
+        border-radius: 22px;
+        cursor: pointer;
+        transition: 0.25s ease-in;
+    }
+
+    .burger .login-button a {
+        text-decoration: none;
+        border: 0px solid rgb(0, 0, 0);
+        border-radius: 22px;
+        color: #fff;
+    }
+
+    .burger .login-button a:hover {
+        color: rgb(156, 127, 77);
+    }
+
+    .burger .login-button:hover  {
+        background: #ffffffde;
+        text-shadow: none;
+    }
+
+    /* footer */
+
+    .footer-section {
+        margin: 5%;
+    }
+
+     .reseaux {
+        margin-left: 13%;
+        width: 80%;
+    }
+
+}
+
+@media(max-width:800px) {
+
+     /* footer */
+
+     .reseaux {
+        display: flex;
+        flex-direction: row;
+        margin-left: 31%;
+        width: 40%;
+    }
+}
+  
+
+@media(max-width:768px) {
+
+    
+}
+
+@media(max-width: 700px) {
+
+    /* footer */
+
+    .reseaux {
+        margin-left: 21%;
+        width: 60%;
+    }
+}
+
+@media(max-width: 480px) {
+
+} 
+
+@media(min-width: 992px) {
+    /* menu burger disparait */
+
+    .burger-all {
+      display: none;
+    }
+    
+  }
+
+
+  
+
+  /*responsive accueil, article*/
+
+@media screen and (min-width: 1600px) and (max-width: 1920px) {
+    .background-image {
+        background: url('mytho.jpg') no-repeat center center / cover;
+    }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1600px) {
+    .background-image {
+        background: url('mytho.jpg') no-repeat center center / cover;
+        width: 100%;
+    }
+    
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1600px) {
+
+    article .article  p{
+        width: 80%;
+
+    }
+    
+    }
+
+
+@media (max-width: 1440px) {
+
+    .texte h2 {
+        font-size: 106px;
+    }
+
+    .accueil a {
+        font-size: 27px;
+    } 
+
+    .histoires h2 {
+       font-size: 60px;
+    }
+
+    .dieux img {
+        width: 80%;
+    }
+
+    article .article {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    article .article > a img {
+        width: 70%; 
+        margin: 30px 0 30px 0; 
+    }  
+
+}
+
+
+@media (max-width: 1200px) {
+
+    .texte h2 {
+        font-size: 100px;
+    }
+
+    .accueil a {
+        font-size: 25px;
+    } 
+
+    .histoires h2 {
+       font-size: 60px;
+    }
+    
+    .dieux {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .texte h2 {
+        font-size: 95px;
+    }
+
+    .accueil a {
+        font-size: 24px;
+    } 
+
+} 
+
+@media (max-width: 700px) {
+
+    .texte h2 {
+        font-size: 90px;
+    }
+
+    .accueil a {
+        font-size: 25px;
+    } 
+
+    .histoires h2 {
+       font-size: 50px;
+    }
+
+    article .article {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+}

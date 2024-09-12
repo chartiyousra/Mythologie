@@ -1,0 +1,436 @@
+/*police*/
+@font-face {
+    font-family: Greek;
+    src: url(police/Norse.otf);
+}
+
+@font-face {
+    font-family: GreekC;
+    src: url(police/ROMANUS.otf);
+}
+ 
+@font-face {
+    font-family: GreekB;
+    src: url(police/Norsebold.otf);
+}
+
+@font-face {
+    font-family: GreekD;
+    src: url(police/HFF\ Greek\ ExCon.ttf);
+}
+
+/* Athena */
+
+/*body*/
+
+body {
+    background: url("./desktop-wallpaper-mount-olympus-heroes-of-olympus.jpg");
+  }
+  
+  .background-image h2 {
+    margin-left: 20px; 
+  }
+  
+  /* Ajout de styles spécifiques pour la page Athéna */
+
+  .images1 img,
+  .images2 img {
+    width: 350px; 
+    height: auto;
+  }
+  
+  .contenu {
+    flex-direction: column; 
+    align-items: center;
+  }
+  
+  .partie1,
+  .partie2 {
+    margin: 30px 20px;
+  }
+  
+  aside {
+    width: 80%; 
+  }
+  
+  .separation, .separation2 {
+    margin-top: 70px; 
+  }
+
+  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
+/*header*/
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    padding: 20px 49px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.header div{
+    position: relative;
+}
+/*logo : MYTHOLOGIE*/
+
+.logo {
+    font-family: GreekB, 'Times New Roman', serif;
+    font-size: 43px;
+    color: rgba(233, 206, 161, 0.8);
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 10px;
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.6);
+}
+
+.logo:hover{
+    transition: 0.1s ease-in-out;
+    color: #e7dbb8ee;
+    text-shadow: 
+        -1.5px -1.5px 0 rgb(104, 88, 60),  
+        1.5px -1.5px 0 rgb(104, 88, 60),
+        -1.5px 1.5px 0 rgb(104, 88, 60),
+        1.5px 1.5px 0 rgb(104, 88, 60);
+}
+
+
+
+/*barre de nav : menus (home,contact..)*/
+
+nav {
+    display: flex;
+    width: auto;
+    z-index: 1000;
+}
+
+.navbar a {
+    font-family: GreekB, 'Times New Roman', serif;
+    font-size: 32px;
+    color:#fff;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 0px;
+    padding: 0 33px;
+
+    
+}
+
+.navbar>div{
+    text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.navbar > div::after {
+    display: none;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #fff4d47a;
+ }
+
+ .navbar > div:hover::after {
+    display: block; 
+    height: 2px; 
+ }
+
+.navbar{
+    position: relative;
+}
+
+nav>div:hover>a{
+    transition: 0.15s ease-in-out;
+    color: #fff4d4ee;
+    text-shadow: 
+        -1.5px -1.5px 0 rgb(104, 88, 60, 0.7),  
+        1.5px -1.5px 0 rgb(104, 88, 60, 0.7),
+        -1.5px 1.5px 0 rgb(104, 88, 60, 0.7),
+        1.5px 1.5px 0 rgb(104, 88, 60, 0.7);
+ 
+}
+
+
+
+/*button login*/
+
+.login-button {
+    font-family: GreekB, Times, serif;
+    position: relative;
+    top :-9px;
+    font-size: 32px;
+    color: #fff;
+    background-color: rgb(219, 193, 149, 0.8);;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 2px;
+    border: 0px solid rgb(219, 193, 149);;
+    border-radius: 22px;
+    cursor: pointer;
+    transition: 0.25s ease-in;
+}
+
+.login-button a {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.login-button:hover {
+    background-color: #ffffffde;
+    color: rgb(156, 127, 77);;
+    text-shadow: none;
+    
+}
+
+.texte-login:hover {
+    color: rgb(156, 127, 77);;
+}
+
+
+
+
+/*sous-menus*/
+
+.submenu {
+    display: none;
+    background-color: rgba(72, 55, 27, 0.7);
+    border-radius: 0 0 10px 10px;
+    text-shadow: none;
+    top:100%;
+    box-sizing: border-box;
+    border-top: 2px solid #fff4d4cd;
+    transition: display 0.3s ease-in-out;
+}
+
+.submenu a {
+    font-family: serif;
+    font-size: 100%;
+}
+
+
+.submenu div {
+    text-align:center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 1.75px solid rgba(233, 207, 164, 0);
+}
+
+.submenu div:hover {
+    border: 1.75px solid rgba(233, 207, 164, 0.6);
+    background-color: rgb(219, 193, 149, 0.7);;
+    cursor: pointer;
+}
+
+
+.submenu > div:hover a{
+    color: rgb(85, 74, 26);
+}
+
+nav > div:hover .submenu{
+    display: block;
+    position: absolute;
+    font-family: Greek, Times, serif;
+    font-size: 24px;
+}
+
+
+
+
+/*bannière d'accueil et titre*/
+body {
+    background:url('zeus_images/fond_olympe.jpg');
+    height: 1200px;
+    margin: auto;
+    background-attachment: fixed;
+}
+
+.background-image {
+    background:url('mytho.jpg') no-repeat center center/100%;
+    height: 130px;
+
+    color: #fff7e9;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 3em;
+    font-family: GreekB, Times, serif;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+}
+
+h2{
+    margin-left : 50px;
+}
+
+.separation, .separation2{
+    background-color: #413e3e;
+    height: 3px;
+}
+
+.separation {
+    margin-top: 150px;
+}
+
+/* contenu */
+
+.contenu {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+/* partie des articles */
+
+.partie1, .partie2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 70px 100px;
+    width: 90%;
+    padding: 20px;
+
+    background-color: #ac944ed5;
+    border-radius: 5%;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.4);;
+}
+
+
+.partie1 div, .partie2 div {
+    margin: 20px;
+}
+
+.partie1 img, .partie2 img {
+    width: 400px;
+    height: 550px;
+    border-radius: 10%;
+    border: solid 2px white;
+    margin: 20px;
+}
+/*
+a voir pour le responsive 
+
+img {
+    width: 200px;
+    height: 300px;
+    border-radius: 10%;
+}
+*/
+
+p {
+    font-family: GreekC;
+    color:  white;
+    font-size: 1.7em;
+    padding: 10px;
+    text-align: start;
+}
+
+.partie2 p {
+    text-align: end;
+}
+
+/* partie aside */
+aside {
+    background-color: white;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.4);
+    border: solid 2px #413e3e;
+
+    width: 40%;
+
+    font-family: GreekC;
+    color:  #9988537a;
+    font-size: 1.5em;
+    text-align: start;
+    padding: 20px 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    margin-right: 70px;
+}
+
+h3 {
+    margin: 20px;
+}
+
+li {
+    margin: 10px;
+    font-weight: 700;
+}
+.separationAside {
+    background-color: #413e3e;
+    color: #413e3e;
+    height: 2px;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+/* Ajout changement de taille Portable */ 
+
+@media only screen and (max-width: 767px) {
+    body {
+      background-attachment: scroll;
+
+       .partie1 img, .partie2 img {
+        max-width: 100%;
+        height: auto; 
+        margin: 20px 0;
+      } 
+    }
+  
+    .background-image {
+      height: auto;
+      padding: 20px;
+      text-align: center;
+      flex-direction: column;
+    }
+  
+    h2 {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  
+    .separation, .separation2 {
+      margin-top: 20px;
+    }
+  
+    .contenu {
+      flex-direction: column;
+      margin-top: 50px;
+    }
+  
+    .partie1, .partie2 {
+      margin: 30px 20px;
+      width: 100%;
+    }
+  
+    .partie1 img, .partie2 img {
+      width: 100%; 
+      height: auto;
+      border-radius: 0; 
+      margin: 20px 0;
+    }
+  
+    aside {
+      width: 100%;
+      margin: 20px 0;
+    }
+}
